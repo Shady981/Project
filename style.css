@@ -707,3 +707,56 @@ body.dark .supervisor-label{
 body.dark .supervisor-name{
   color:#f9fafb;
 }
+/* ================= RESPONSIVE NAVBAR ================= */
+
+/* Hamburger Button */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  color:#065f46;
+}
+
+/* Mobile Styles */
+@media (max-width: 900px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:260px;
+    height:100vh;
+    background:white;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:100px 25px;
+    gap:20px;
+    transition:.3s ease;
+    box-shadow:-10px 0 30px rgba(0,0,0,.15);
+    z-index:9999;
+  }
+
+  .nav-links a,
+  .nav-links button{
+    font-size:20px;
+  }
+
+  .nav-links.open{
+    right:0;
+  }
+}
+
+/* Dark Mode */
+body.dark .menu-toggle{
+  color:#e5e7eb;
+}
+
+body.dark .nav-links{
+  background:#020617;
+}
