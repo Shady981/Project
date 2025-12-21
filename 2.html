@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accident Analysis in Egypt | Dashboards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- MAIN STYLE -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- Scroll Buttons -->
+<div class="scroll-arrows">
+  <button id="scrollUp" aria-label="Scroll Up">↑</button>
+  <button id="scrollDown" aria-label="Scroll Down">↓</button>
+</div>
+
+<body class="dashboard">
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar"></div>
+
+<!-- ===== GLOBAL NAVBAR ===== -->
+<header class="navbar">
+  <div class="logo">
+    <img src="صور/logo.jpg" alt="Logo">
+    Accident Analysis in Egypt
+  </div>
+
+  <nav class="nav-links">
+    <a href="1.html">Overview</a>
+    <a href="2.html" class="active">Dashboards</a>
+    <a href="3.html">Insights</a>
+    <a href="4.html">Summary</a>
+    <button id="darkToggle" class="nav-btn">🌙</button>
+ 
+  </nav>
+</header>
+
+<!-- ===== SUB NAVBAR (FIXED) ===== -->
+<div class="sub-navbar-fixed">
+  <a href="#dash1" class="sub-btn">Injuries</a>
+  <a href="#dash2" class="sub-btn">Deaths</a>
+  <a href="#dash3" class="sub-btn">Accidents</a>
+  <a href="#dash4" class="sub-btn">Ambulance</a>
+</div>
+
+<!-- SPACER -->
+<div style="height:180px;"></div>
+
+<!-- ================= DASHBOARD 1 ================= -->
+<section id="dash1" class="card dash">
+  <h2>Injuries per Year</h2>
+  <img src="صور/1.jpg" alt="Injuries Dashboard">
+  <p>
+    Displays trends in road accident injuries over time, categorized by 
+      governorate, age group, and transportation mode. 
+  </p>
+</section>
+
+<!-- ================= DASHBOARD 2 ================= -->
+<section id="dash2" class="card dash">
+  <h2>Deaths per Year</h2>
+  <img src="صور/2.jpg" alt="Deaths Dashboard">
+  <p class="dash-desc">
+    Focuses on fatality trends, highlighting high-risk regions and
+    changes across different years.
+  </p>
+</section>
+
+<section id="dash3" class="card dash">
+  <h2>Accidents by Governorates</h2>
+  <img src="صور/3.jpg" alt="Accidents Dashboard">
+  <p class="dash-desc">
+    Analyzes accidents based on gender and age groups to identify
+    vulnerable population segments.
+  </p>
+</section>
+
+<section id="dash4" class="card dash">
+  <h2>Ambulance Distribution</h2>
+  <img src="صور/4.jpg" alt="Ambulance Dashboard">
+  <p class="dash-desc">
+    Visualizes ambulance availability, number of centers, and coverage
+    ratios relative to population size.
+  </p>
+</section>
+
+<!-- ===== PAGE NAVIGATION ===== -->
+<section class="card page-navigation">
+  <div class="page-nav-wrapper">
+    <a href="1.html" class="page-nav-btn secondary">
+      ← Back to Overview
+    </a>
+    <a href="3.html" class="page-nav-btn primary">
+      View Insights & Recommendations →
+    </a>
+  </div>
+</section>
+
+<!-- SCROLL BUTTONS -->
+<button id="scrollTop">⬆</button>
+<button id="scrollBottom">⬇</button>
+
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollSmoother.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/TextPlugin.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+
+<script src="script.js"></script>
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <strong><p>
+    © <span id="yearRange">2025</span> Accident Analysis in Egypt.
+    <br>
+    Graduation Project – Faculty of Science .
+    <br>
+    Supervised by <strong>Dr. Rasha Abobakr</strong>
+  </p></strong>
+</footer>
+
+
+</body>
+</html>

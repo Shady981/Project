@@ -1,0 +1,709 @@
+/*********************************
+  GLOBAL RESET
+*********************************/
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", sans-serif;
+}
+
+/*********************************
+  PAGE 1 : OVERVIEW
+*********************************/
+body{
+  background: linear-gradient(135deg,#eafaf1,#d1f5e1);
+  color:#063c2d;
+  padding:60px 20px;
+  overflow-x:hidden;
+}
+
+/* BACKGROUND SHAPES */
+.bg-shape{
+  position:fixed;
+  border-radius:50%;
+  opacity:0.15;
+  z-index:-1;
+}
+.shape1{
+  width:400px;
+  height:400px;
+  background:#34d399;
+  top:-100px;
+  left:-100px;
+}
+.shape2{
+  width:500px;
+  height:500px;
+  background:#065f46;
+  bottom:-150px;
+  right:-150px;
+}
+
+/*********************************
+  HERO
+*********************************/
+.hero{
+  text-align:center;
+  margin-bottom:60px;
+}
+.hero h1{
+  font-size:56px;
+  font-weight:800;
+}
+.subtitle{
+  font-size:24px;
+  margin-top:12px;
+  opacity:0.9;
+}
+
+/*********************************
+  GLOBAL CARD
+*********************************/
+.card{
+  background:rgba(255,255,255,0.95);
+  border-radius:30px;
+  padding:44px;
+  max-width:1100px;
+  margin:60px auto;
+  box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+.card h2{
+  margin-bottom:22px;
+  color:#065f46;
+  font-size:34px;
+  font-weight:800;
+}
+.card p{
+  font-size:19px;
+  line-height:1.9;
+}
+
+/*********************************
+  VALUE SECTION
+*********************************/
+.value-section{
+  max-width:1200px;
+  margin:100px auto;
+  text-align:center;
+}
+.value-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+  margin-top:45px;
+}
+.value-card{
+  background:#064e3b;
+  color:white;
+  padding:34px;
+  border-radius:26px;
+  transition:.3s;
+}
+.value-card h3{
+  font-size:28px;
+  font-weight:900;
+  margin-bottom:16px;
+}
+.value-card:hover{
+  background:#047857;
+  transform:translateY(-8px);
+}
+
+/*********************************
+  TEAM
+*********************************/
+.team{
+  text-align:center;
+  margin-top:100px;
+}
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:40px;
+}
+.team-grid span{
+  background:#065f46;
+  color:white;
+  padding:18px 24px;
+  border-radius:28px;
+  font-size:19px;
+  font-weight:800;
+}
+
+/*********************************
+  ROLES
+*********************************/
+.roles{
+  max-width:1100px;
+  margin:100px auto;
+}
+.role-card{
+  background:#ecfdf5;
+  padding:30px;
+  border-left:8px solid #10b981;
+  border-radius:20px;
+  margin-bottom:25px;
+  font-size:19px;
+}
+
+/*********************************
+  DASHBOARD BODY
+*********************************/
+body.dashboard{
+  background:#f0fdf4;
+  color:#064e3b;
+  padding-top:200px;
+  min-height:100vh;
+}
+body.dashboard .bg-shape{
+  display:none;
+}
+
+/*********************************
+  NAVBAR
+*********************************/
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:white;
+  padding:18px 36px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 8px 28px rgba(0,0,0,.18);
+  z-index:10000;
+}
+.navbar .logo{
+  display:flex;
+  align-items:center;
+  font-size:23px;
+  font-weight:800;
+  color:#065f46;
+}
+.navbar .logo img{
+  height:44px;
+  margin-right:12px;
+}
+.nav-links a{
+  margin-left:22px;
+  text-decoration:none;
+  color:#065f46;
+  font-size:20px;
+  font-weight:800;
+}
+.nav-links a.active{
+  border-bottom:4px solid #16a34a;
+  padding-bottom:6px;
+}
+
+/*********************************
+  SUB NAVBAR
+*********************************/
+.sub-navbar-fixed{
+  position:fixed;
+  top:82px;
+  width:100%;
+  background:#ecfdf5;
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  padding:18px 10px;
+  border-bottom:4px solid #16a34a;
+  z-index:9999;
+}
+.sub-btn{
+  background:#065f46;
+  color:white;
+  padding:16px 34px;
+  border-radius:40px;
+  text-decoration:none;
+  font-size:21px;
+  font-weight:900;
+  transition:.3s;
+}
+.sub-btn:hover{
+  background:#047857;
+  transform:translateY(-3px);
+}
+.sub-btn.active{
+  background:#16a34a;
+}
+
+/*********************************
+  DASHBOARD IMAGES
+*********************************/
+body.dashboard section.dash img{
+  width:100%;
+  height:auto;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+/*********************************
+  KPI SECTION
+*********************************/
+.kpi-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:35px;
+  margin-top:40px;
+}
+.kpi-box{
+  background:white;
+  padding:28px;
+  border-radius:28px;
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+  text-align:center;
+}
+.kpi-box img{
+  width:100%;
+  max-height:420px;
+  object-fit:contain;
+  margin-bottom:18px;
+}
+
+/*********************************
+  INSIGHTS GRID
+*********************************/
+.insights-grid{
+  max-width:1300px;
+  margin:100px auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:40px;
+}
+.insight-card{
+  background:white;
+  border-radius:30px;
+  padding:28px;
+  box-shadow:0 18px 40px rgba(0,0,0,.15);
+}
+.insight-card img{
+  width:100%;
+  max-height:460px;
+  object-fit:contain;
+  border-radius:22px;
+  margin-bottom:22px;
+}
+
+/*********************************
+  PROBLEM / RECOMMENDATION
+*********************************/
+.insight-text-block{
+  background:#ecfdf5;
+  padding:22px;
+  border-left:7px solid #16a34a;
+  border-radius:18px;
+  margin-bottom:18px;
+}
+.insight-text-block h4{
+  font-size:22px;
+  font-weight:900;
+}
+.insight-text-block-red{
+  background:#ecfdf5;
+  padding:22px;
+  border-left:7px solid red;
+  border-radius:18px;
+  margin-bottom:18px;
+}
+
+/*********************************
+  PAGE NAVIGATION
+*********************************/
+.page-navigation{
+  max-width:950px;
+  margin:100px auto;
+  background:#f8faf9;
+  border:2px solid #d1fae5;
+}
+.page-nav-wrapper{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+}
+.page-nav-btn{
+  padding:20px 40px;
+  border-radius:45px;
+  font-size:21px;
+  font-weight:900;
+  text-decoration:none;
+  min-width:280px;
+  text-align:center;
+}
+.page-nav-btn.secondary{
+  background:#e5e7eb;
+  color:#064e3b;
+}
+.page-nav-btn.primary{
+  background:#065f46;
+  color:white;
+}
+
+/*********************************
+  RESPONSIVE
+*********************************/
+@media(max-width:900px){
+  .team-grid,
+  .kpi-grid,
+  .insights-grid{
+    grid-template-columns:1fr;
+  }
+  .sub-navbar-fixed{
+    flex-wrap:wrap;
+  }
+  .page-nav-wrapper{
+    flex-direction:column;
+  }
+}
+/* NAV ACTION BUTTONS */
+.nav-actions{
+  display:flex;
+  gap:12px;
+}
+.nav-btn{
+  background:#e5e7eb;
+  border:none;
+  padding:10px 14px;
+  border-radius:12px;
+  font-size:16px;
+  cursor:pointer;
+  font-weight:700;
+}
+/* ================= DARK MODE (FIXED & PROFESSIONAL) ================= */
+
+/* BODY */
+body.dark{
+  background:#0f172a;      /* خلفية عامة */
+  color:#e5e7eb;           /* نص افتراضي */
+}
+
+/* NAVBAR */
+body.dark .navbar,
+body.dark .sub-navbar-fixed{
+  background:#020617;
+  color:#e5e7eb;
+  border-bottom:1px solid #1e293b;
+}
+
+/* LINKS */
+body.dark a{
+  color:#e5e7eb;
+}
+body.dark a:hover{
+  color:#4ade80;
+}
+
+/* NAV BUTTONS */
+body.dark .nav-btn,
+body.dark .sub-btn{
+  background:#334155;
+  color:#f9fafb;
+}
+body.dark .sub-btn.active{
+  background:#16a34a;
+  color:white;
+}
+
+/* CARDS (ALL BOXES) */
+body.dark .card,
+body.dark .insight-card,
+body.dark .kpi-box{
+  background:#020617;
+  color:#e5e7eb;
+  box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
+
+/* HEADINGS */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4{
+  color:#f9fafb;
+}
+
+/* PARAGRAPHS */
+body.dark p,
+body.dark li{
+  color:#d1d5db;
+}
+
+/* ================= PROBLEM / RECOMMENDATION ================= */
+
+/* Problem (Red) */
+body.dark .insight-text-block-red{
+  background:#020617;
+  border-left:7px solid #ef4444;
+}
+body.dark .insight-text-block-red h4{
+  color:#f87171;
+}
+body.dark .insight-text-block-red p{
+  color:#e5e7eb;
+}
+
+/* Recommendation (Green) */
+body.dark .insight-text-block{
+  background:#020617;
+  border-left:7px solid #22c55e;
+}
+body.dark .insight-text-block h4{
+  color:#4ade80;
+}
+body.dark .insight-text-block p{
+  color:#e5e7eb;
+}
+
+/* KPI TEXT */
+body.dark .kpi-box p{
+  color:#e5e7eb;
+}
+
+/* TEAM / FINAL RECOMMENDATION TEXT */
+body.dark .team span,
+body.dark .role-card p{
+  color:#e5e7eb;
+}
+
+/* ================= FIX TEAM & CONTRIBUTIONS IN DARK MODE ================= */
+
+/* Team / Role cards */
+body.dark .role-card,
+body.dark .team-grid span,
+body.dark .team div,
+body.dark .team section,
+body.dark .team-card{
+  background:#020617 !important;
+  color:#e5e7eb !important;
+}
+
+/* Names */
+body.dark .role-card h4,
+body.dark .team h3,
+body.dark .team span strong{
+  color:#f9fafb !important;
+}
+
+/* Descriptions */
+body.dark .role-card p,
+body.dark .team span,
+body.dark .team-card p{
+  color:#d1d5db !important;
+}
+
+/* لو في border أو line جانبية */
+body.dark .role-card{
+  border-left:6px solid #22c55e;
+}
+/* Dashboard description text */
+.dash-desc{
+  font-size:20px;        /* كبر الخط */
+  font-weight:700;       /* Bold */
+  line-height:1.9;
+  margin-top:18px;
+  color:#064e3b;
+}
+/* ================= SCROLL ARROWS ================= */
+.scroll-arrows{
+  position:fixed;
+  right:22px;
+  bottom:30px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:9999;
+}
+
+.scroll-arrows button{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+  font-size:22px;
+  font-weight:900;
+  background:#065f46;
+  color:white;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  transition:.3s;
+}
+
+.scroll-arrows button:hover{
+  background:#16a34a;
+  transform:translateY(-3px);
+}
+
+/* Dark Mode */
+body.dark .scroll-arrows button{
+  background:#334155;
+}
+body.dark .scroll-arrows button:hover{
+  background:#16a34a;
+}
+/* ================= FINAL RECOMMENDATIONS ================= */
+
+.final-recommendations{
+  max-width:1300px;
+  margin:120px auto;
+  padding:0 20px;
+}
+
+.final-title{
+  text-align:center;
+  font-size:42px;
+  font-weight:900;
+  color:#065f46;
+  margin-bottom:35px;
+}
+
+/* Intro */
+.final-intro{
+  background:#ecfdf5;
+  padding:28px 34px;
+  border-left:8px solid #16a34a;
+  border-radius:20px;
+  max-width:1100px;
+  margin:0 auto 60px;
+}
+.final-intro p{
+  font-size:21px;
+  line-height:1.9;
+  font-weight:600;
+}
+
+/* Grid */
+.final-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
+
+/* Card */
+.final-card{
+  background:white;
+  padding:30px;
+  border-radius:24px;
+  box-shadow:0 18px 40px rgba(0,0,0,.12);
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+}
+.final-card span{
+  font-size:26px;
+  font-weight:900;
+  color:#16a34a;
+}
+.final-card p{
+  font-size:20px;
+  line-height:1.9;
+  font-weight:600;
+}
+
+/* ================= DARK MODE ================= */
+body.dark .final-title{
+  color:#f9fafb;
+}
+body.dark .final-intro{
+  background:#020617;
+  border-left-color:#22c55e;
+}
+body.dark .final-intro p,
+body.dark .final-card p{
+  color:#e5e7eb;
+}
+body.dark .final-card{
+  background:#020617;
+  box-shadow:0 15px 35px rgba(0,0,0,.6);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .final-grid{
+    grid-template-columns:1fr;
+  }
+}
+/* ================= ACKNOWLEDGMENT ================= */
+.supervisor{
+  text-align:center;
+}
+
+.college-logo{
+  margin-top:35px;
+}
+
+.college-logo img{
+  width:140px;        /* مقاس مناسب للجنة */
+  height:auto;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.college-logo img:hover{
+  transform:scale(1.08);
+}
+
+.logo-note{
+  margin-top:10px;
+  font-size:15px;
+  opacity:.7;
+}
+
+/* Dark Mode */
+body.dark .logo-note{
+  color:#d1d5db;
+}
+/* ================= FOOTER ================= */
+.site-footer{
+  margin-top:80px;
+  padding:25px 15px;
+  text-align:center;
+  font-size:15px;
+  line-height:1.8;
+  color:#064e3b;
+  border-top:1px solid #d1fae5;
+  background:transparent;
+}
+
+/* Dark Mode */
+body.dark .site-footer{
+  color:#d1d5db;
+  border-top:1px solid #1e293b;
+}
+/* ================= PROJECT SUPERVISOR ================= */
+.project-supervisor{
+  text-align:center;
+  margin:80px auto 50px;
+}
+
+.supervisor-label{
+  display:inline-block;
+  padding:8px 22px;
+  border-radius:30px;
+  background:#bbf7d0;
+  color:#065f46;
+  font-size:15px;
+  font-weight:800;
+  margin-bottom:14px;
+}
+
+.supervisor-name{
+  font-size:34px;
+  font-weight:900;
+  color:#064e3b;
+  letter-spacing:.5px;
+}
+
+/* Dark Mode */
+body.dark .supervisor-label{
+  background:#134e4a;
+  color:#ecfeff;
+}
+
+body.dark .supervisor-name{
+  color:#f9fafb;
+}
