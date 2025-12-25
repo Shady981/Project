@@ -821,3 +821,15 @@ body.dark .nav-links{
   position:relative;
   z-index:1;
 }
+body.dark .final-recommendations{
+  background:#020617;
+  box-shadow:0 15px 40px rgba(0,0,0,.6);
+}
+
+body.dark .final-recommendations::before{
+  background: linear-gradient(
+    135deg,
+    rgba(74,222,128,.08),
+    transparent 60%
+  );
+}
