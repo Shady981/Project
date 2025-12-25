@@ -130,25 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ======================================================
-     SCROLL TO TOP / BOTTOM
-  ====================================================== */
-  const topBtn = document.getElementById("scrollTop");
-  const bottomBtn = document.getElementById("scrollBottom");
-
-  if (topBtn) {
-    topBtn.onclick = () =>
-      gsap.to(window, { scrollTo: 0, duration: 1 });
-  }
-
-  if (bottomBtn) {
-    bottomBtn.onclick = () =>
-      gsap.to(window, {
-        scrollTo: document.body.scrollHeight,
-        duration: 1
-      });
-  }
-
-  /* ======================================================
      PROGRESS BAR (PAGE 2)
   ====================================================== */
   const progress = document.getElementById("progress-bar");
@@ -276,14 +257,22 @@ const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
 if(menuToggle && navLinks){
-  menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("open");
+    if (navLinks.classList.contains("open")) {
+      menuToggle.innerHTML = "&times;"; // Change to 'X'
+    } else {
+      menuToggle.innerHTML = "⋯"; // Change back to three-dots
+    }
   });
 
   // Close menu when clicking a link
   navLinks.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("open");
+      menuToggle.innerHTML = "⋯";
     });
   });
 }
+
+
